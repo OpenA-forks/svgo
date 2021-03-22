@@ -32,7 +32,7 @@ exports.params = {
 exports.fn = function (item, params) {
   let namespaces = editorNamespaces;
   if (Array.isArray(params.additionalNamespaces)) {
-    namespaces = [...editorNamespaces, ...params.additionalNamespaces];
+    namespaces = editorNamespaces.concat(params.additionalNamespaces);
   }
 
   if (item.type === 'element') {

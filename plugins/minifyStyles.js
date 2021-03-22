@@ -70,7 +70,7 @@ exports.fn = function (ast, options) {
 };
 
 function cloneObject(obj) {
-  return { ...obj };
+  return Object.assign({}, obj);
 }
 
 function findStyleElems(ast) {

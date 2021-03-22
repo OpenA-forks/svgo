@@ -48,7 +48,7 @@ FS.readFile(filepath, 'utf8', function (err, data) {
     throw err;
   }
 
-  const result = optimize(data, { path: filepath, ...config });
+  const result = optimize(data, Object.assign({ path: filepath }, config));
 
   console.log(result);
 

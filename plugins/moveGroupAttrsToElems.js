@@ -8,7 +8,7 @@ exports.active = true;
 
 exports.description = 'moves some group attributes to the content elements';
 
-const pathElemsWithGroupsAndText = [...pathElems, 'g', 'text'];
+const pathElemsWithGroupsAndText = pathElems.concat(['g', 'text']);
 
 /**
  * Move group attrs to the content elements.
